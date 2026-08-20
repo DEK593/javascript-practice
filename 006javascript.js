@@ -10,6 +10,11 @@ while (round < 5) {
     "How many pings do you want to send (max 5 at round)?",
   );
   let number = parseInt(text, 10);
+  if (isNaN(number)) {
+    console.log("is not a number");
+    continue;
+  }
+
   round = round + 1;
   if (number > 5) {
     console.log("active firewall");
